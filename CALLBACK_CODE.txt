@@ -1,0 +1,17 @@
+STOCK ANALYZER PRO CALLBACK CODE
+================================
+
+Code: SAP-RESUME-2026
+Project: C:\Temp\stock-analyzer-pro
+
+How to resume anytime:
+1) Open PowerShell
+2) Run:
+   powershell -ExecutionPolicy Bypass -File "C:\Temp\stock-analyzer-pro\resume_project.ps1"
+
+What this starts:
+- Backend API on http://localhost:8000
+- Frontend app on http://localhost:5173
+
+When asking AI to continue edits, use:
+"Use callback code SAP-RESUME-2026. Open C:\Temp\stock-analyzer-pro and continue from latest code."

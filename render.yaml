@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: stock-analyzer-api
+    env: python
+    rootDir: backend
+    plan: free
+    autoDeploy: true
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: APP_DATABASE_URL
+        value: sqlite:///./stock_analyzer.db
+      - key: APP_INTEGRATION_MODE
+        value: simulated
+      - key: APP_ENCRYPTION_KEY
+        generateValue: true
